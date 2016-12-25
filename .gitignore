@@ -1,0 +1,8 @@
+Import
+Library
+.vs
+Assets/GoogleVR*
+Assets/Plugins*
+Assets/Editor*
+Assets/Puzzler*
+Temp
