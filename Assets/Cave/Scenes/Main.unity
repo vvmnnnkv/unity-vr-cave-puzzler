@@ -245,7 +245,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 145871985}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1355577513}
+        m_MethodName: resetPuzzle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &145871985
@@ -4206,7 +4217,6 @@ GameObject:
   - component: {fileID: 819936374}
   - component: {fileID: 819936373}
   - component: {fileID: 819936372}
-  - component: {fileID: 819936377}
   m_Layer: 0
   m_Name: Position-Inside
   m_TagString: Untagged
@@ -4230,8 +4240,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 819936377}
-          m_MethodName: MoveCamera
+        - m_Target: {fileID: 1355577513}
+          m_MethodName: enterCave
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4307,18 +4317,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &819936377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 819936371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbf7159dac5517b48923bd4bd0a7ed7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj: {fileID: 819936371}
 --- !u!1 &837877674
 GameObject:
   m_ObjectHideFlags: 0
@@ -4374,7 +4372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &908757979
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4747,7 +4745,6 @@ GameObject:
   - component: {fileID: 1047305005}
   - component: {fileID: 1047305004}
   - component: {fileID: 1047305003}
-  - component: {fileID: 1047305002}
   m_Layer: 0
   m_Name: Position-Exit
   m_TagString: Untagged
@@ -4755,18 +4752,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1047305002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1047305001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbf7159dac5517b48923bd4bd0a7ed7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj: {fileID: 1047305001}
 --- !u!114 &1047305003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4783,8 +4768,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1047305002}
-          m_MethodName: MoveCamera
+        - m_Target: {fileID: 1355577513}
+          m_MethodName: leaveCave
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4858,7 +4843,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -28.591002, z: 0}
 --- !u!1001 &1099701939
 Prefab:
@@ -5076,7 +5061,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1188041654}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1355577513}
+        m_MethodName: startGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1188041654
@@ -5316,7 +5312,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1300085190
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5400,6 +5396,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1355577512}
+  - component: {fileID: 1355577513}
   m_Layer: 0
   m_Name: gameLogic
   m_TagString: Untagged
@@ -5420,6 +5417,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1355577513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1355577511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 858da3053b2f3094d8586b83829297d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 915617979}
+  startUI: {fileID: 1797861909}
+  playUI: {fileID: 908757978}
+  restartUI: {fileID: 1300085189}
+  startPoint: {fileID: 1363912884}
+  playPoint: {fileID: 819936371}
+  restartPoint: {fileID: 1047305001}
+  playerWon: 0
 --- !u!1 &1363912884
 GameObject:
   m_ObjectHideFlags: 0
@@ -5447,7 +5463,7 @@ Transform:
   m_Children:
   - {fileID: 915617984}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1374173655
 Prefab:
@@ -5820,7 +5836,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1588269933}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1355577513}
+        m_MethodName: startGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1588269933
@@ -6273,6 +6300,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70cf5dfcdfeb19b45b75a7c4e6d21b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1643818102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643818100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1355577513}
+          m_MethodName: puzzleSuccess
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &1665064393
 Prefab:
   m_ObjectHideFlags: 0
@@ -6414,7 +6471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1797861910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6641,7 +6698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1978973335
 Transform:
   m_ObjectHideFlags: 0
