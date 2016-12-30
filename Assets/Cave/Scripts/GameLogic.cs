@@ -277,7 +277,6 @@ public class GameLogic : MonoBehaviour
         bool end = false;
         _toggleCrystals(false);
         restartPoint.SetActive(false);
-
         switch (_state)
         {
             case State.Intro:

@@ -56,7 +56,7 @@ public class Blink : MonoBehaviour
     public void Shine()
     {
         // peak values for highlighting crystal
-        peakEmission = 14f;
+        peakEmission = 15f;
         peakBlinkVariation = 2f;
         t = 0;
     }
@@ -65,7 +65,7 @@ public class Blink : MonoBehaviour
     {
         // lowest values for darkening crystal
         peakEmission = -4f;
-        peakBlinkVariation = 3f;
+        peakBlinkVariation = 1f;
         t = 0;
     }
 }
