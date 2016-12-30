@@ -1,4 +1,4 @@
-# Phase 2
+# UI Part
 At this point the UI panels are added to the scene and button events are set to close panels.
 Player can move around and interact with UI.
 

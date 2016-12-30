@@ -1,4 +1,4 @@
-# Phase 1
+# Scene Part
 At this point the scene is set in overall (lights, objects are placed).
 
 ## Entry
