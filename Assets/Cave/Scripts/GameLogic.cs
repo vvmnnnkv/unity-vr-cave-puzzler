@@ -212,10 +212,13 @@ public class GameLogic : MonoBehaviour
     // Called when clicking on the cave entrance
     public void enterCave()
     {
+        // disable clickable area
+        playPoint.GetComponent<Collider>().enabled = false;
+        // move camera
         iTween.MoveTo(player,
             iTween.Hash(
                 "position", playPoint.transform.position,
-                "time", 1.5f,
+                "time", 2f,
                 "easetype", "linear",
                 "oncompletetarget", gameObject,
                 "oncomplete", "_onEnterCave"
@@ -245,10 +248,13 @@ public class GameLogic : MonoBehaviour
     // Called when clicking on cave exit
     public void leaveCave()
     {
+        // disable clickable area
+        restartPoint.GetComponent<Collider>().enabled = false;
+        // move camera
         iTween.MoveTo(player,
             iTween.Hash(
                 "position", restartPoint.transform.position,
-                "time", 1.5f,
+                "time", 2f,
                 "easetype", "linear",
                 "oncompletetarget", gameObject,
                 "oncomplete", "_onLeaveCave"
