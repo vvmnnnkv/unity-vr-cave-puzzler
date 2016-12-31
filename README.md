@@ -76,7 +76,9 @@ however plain teleport makes the game too dull.
 ### User testing
 User testing and reflecting on the testing results was the most time-consuming but fun part of the project.
 I made 3 testing sessions: for the early build of the scene, UI interactions, and the final game.
+
 Full testing records and related game updates can be found in [Documentation](Documentation) folder, I'll just provide summary below.
+
 The questions were targeted to see what user feels and understands/expects without revealing "what is right to feel and understand", 
 and then checking if this do match with atmosphere and expectations I wanted to create in the game.
 Surprisingly, tests went very well and in most cases user's game perception was close to desired.
