@@ -62,6 +62,7 @@ By UX I mostly mean putting more polish to create better atmosphere and more int
 Things to mention are: 
  * Glowing and pulsing crystals and highlighted area around them filled with glowing "crystal dust" particles, 
    accompanied with specific "magical" music coming from that place. This is done for attracting player attention to the main game element, and making the mysterious atmosphere around crystals.
+ * To make playing with crystals more fun, each crystal has its unique sound. Puzzle is randomized each time player makes mistake.
  * Cave stone animation and sound should bring user's attention to the cleared cave's exit and make user do the last click to go out the cave.
  * Textual hints on the popups above the button should provide guidance to users who does not understand what to do intuitively.
  * Movement between locations is done by clicking on the area in front of the user, using linear movement.
